@@ -1,0 +1,2 @@
+E:\Cortana\Projetos & Estudos\Projetos\Programação\NotesBook\NotesBook\NotesBook\NotesBook.UWP\NotesBook.UWP.csproj;x64
+E:\Cortana\Projetos & Estudos\Projetos\Programação\NotesBook\NotesBook\NotesBook\NotesBook\NotesBook.csproj;neutral

@@ -1,0 +1,18 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="NotesBook.EditCursoPage"
+             Title="Curso">
+    <ContentPage.Content>
+        <StackLayout>
+            <Label Text="Nome" Style="{StaticResource LabelTitle}"/>
+            <Entry Text="{Binding Nome}" Placeholder="Nome do curso..." Style="{StaticResource EntryText}"/>
+            <Label Text="Períodos" Style="{StaticResource LabelTitle}"/>
+            <Entry Text="{Binding QutdFases}" Placeholder="Quantidade de Anos/Semº/Modulos" Keyboard="Numeric" 
+                   Style="{StaticResource EntryText}"/>
+            <Label Text="Descrição" Style="{StaticResource LabelTitle}"/>
+            <Editor Text="{Binding Descricao}" Style="{StaticResource EditorText}"/>
+            <Button Text="Concluir" Style="{StaticResource ConfirmButton}" Command="{Binding ConcluirCommand}"/>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

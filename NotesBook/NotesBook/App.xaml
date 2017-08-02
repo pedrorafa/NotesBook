@@ -1,0 +1,48 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Application xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:light="clr-namespace:Xamarin.Forms.Themes;assembly=Xamarin.Forms.Theme.Light"
+             x:Class="NotesBook.App">
+    <Application.Resources>
+        <ResourceDictionary>
+            <!-- Buttons -->
+            <Style x:Key="AddButton" TargetType="Button">
+                <Setter Property="FontAttributes" Value="Bold"/>
+                <Setter Property="FontSize" Value="Large"/>
+                <Setter Property="TextColor" Value="WhiteSmoke"/>
+                <Setter Property="BackgroundColor" Value="Green"/>
+            </Style>
+            <Style x:Key="ConfirmButton" TargetType="Button">
+                <Setter Property="FontAttributes" Value="Bold"/>
+                <Setter Property="FontSize" Value="Large"/>
+                <Setter Property="TextColor" Value="WhiteSmoke"/>
+                <Setter Property="BackgroundColor" Value="Blue"/>
+            </Style>
+            
+            <!-- Labels -->
+            <Style x:Key="LabelTitle" TargetType="Label">
+                <Setter Property="FontAttributes" Value="Bold"/>
+                <Setter Property="FontSize" Value="Medium"/>
+            </Style>
+            
+            <!-- Entry Components -->
+            <Style x:Key="EditorText" TargetType="Editor">
+                <Setter Property="FontSize" Value="Medium"/>
+            </Style>
+            <Style x:Key="EntryText" TargetType="Entry">
+                <Setter Property="FontSize" Value="Medium"/>
+            </Style>
+            <Style x:Key="LabelEntry" TargetType="Label">
+                <Setter Property="FontSize" Value="Medium"/>
+            </Style>
+            
+            <!-- Layouts -->
+            <Style x:Key="ListLayout" TargetType="StackLayout">
+                <Setter Property="VerticalOptions" Value="Center"/>
+                <Setter Property="Spacing" Value="5"/>
+            </Style>
+            
+        </ResourceDictionary>
+    </Application.Resources>
+
+</Application>

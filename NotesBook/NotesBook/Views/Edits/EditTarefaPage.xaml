@@ -1,0 +1,16 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="NotesBook.EditTarefaPage">
+    <ContentPage.Content>
+        <StackLayout>
+            <Label Text="Nome" Style="{StaticResource LabelTitle}"/>
+            <Entry Text="{Binding Nome}" Placeholder="Nome do curso..." Style="{StaticResource EntryText}"/>
+            <Label Text="Descrição" Style="{StaticResource LabelTitle}"/>
+            <Editor Text="{Binding Descricao}" Style="{StaticResource EditorText}"/>
+                <Label Text="Prazo de entrega" Style="{StaticResource LabelTitle}"/>
+            <DatePicker Date="{Binding Prazo}" MinimumDate="{Binding Today}"/>
+            <Button Text="Concluir" Style="{StaticResource ConfirmButton}" Command="{Binding ConcluirCommand}"/>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

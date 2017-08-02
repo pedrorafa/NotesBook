@@ -1,0 +1,27 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="NotesBook.CursosPage"
+             Title="Cursos">
+    <ContentPage.ToolbarItems>
+        <ToolbarItem Text="+" Command="{Binding AdicionarCommand}"/>
+    </ContentPage.ToolbarItems>
+    <ContentPage.Content>
+        <StackLayout Style="{StaticResource ListLayout}">
+            <ListView ItemsSource="{Binding Cursos}" ItemSelected="SelecionarCurso">
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <TextCell Height="100" Text="{Binding Nome}" Detail="{Binding Descricao}" TextColor="Black" DetailColor="Gray">
+                            <TextCell.ContextActions>
+                                <MenuItem Clicked="EditarClicked"  CommandParameter="{Binding .}" Text="Editar" IsDestructive="True" />
+                                <MenuItem Clicked="ConcluirClicked"  CommandParameter="{Binding .}" Text="Concluir" IsDestructive="True" />
+                                <MenuItem Clicked="DeletarClicked"  CommandParameter="{Binding .}" Text="Deletar" IsDestructive="True" />
+                            </TextCell.ContextActions>
+                        </TextCell>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+            <Button Text="+" Style="{StaticResource AddButton}" Command="{Binding AdicionarCommand}"/>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

@@ -1,0 +1,14 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="NotesBook.ConteudoAnotacaoPage">
+    <ContentPage.ToolbarItems>
+        <ToolbarItem Text="Editar" Command="{Binding EditarCommand}"/>
+    </ContentPage.ToolbarItems>
+    <ContentPage.Content>
+        <StackLayout VerticalOptions="Start" Padding="20" Spacing="5">
+            <Label Text="{Binding Titulo}" FontAttributes="Italic" FontSize="Large" />
+            <Label Text="{Binding Conteudo}" FontAttributes="None" FontSize="Medium" />
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

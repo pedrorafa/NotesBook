@@ -1,0 +1,26 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="NotesBook.AnotacoesPage"
+             Title="Anotações">
+    <ContentPage.ToolbarItems>
+        <ToolbarItem Text="+" Command="{Binding AdicionarCommand}"/>
+    </ContentPage.ToolbarItems>
+    <ContentPage.Content>
+        <StackLayout Style="{StaticResource ListLayout}">
+            <ListView ItemsSource="{Binding Anotacaos}" ItemSelected="SelecionarAnotacao" >
+                <ListView.ItemTemplate>
+                    <DataTemplate >
+                        <ImageCell Height="100" ImageSource="{Binding IconUrl}" Text="{Binding Titulo}" Detail="{Binding Data}">
+                            <ImageCell.ContextActions>
+                                <MenuItem Clicked="EditarClicked"  CommandParameter="{Binding .}" Text="Editar" IsDestructive="True" />
+                                <MenuItem Clicked="DeletarClicked"  CommandParameter="{Binding .}" Text="Deletar" IsDestructive="True" />
+                            </ImageCell.ContextActions>
+                        </ImageCell>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+            <Button Text="+" Style="{StaticResource AddButton}" Command="{Binding AdicionarCommand}"/>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

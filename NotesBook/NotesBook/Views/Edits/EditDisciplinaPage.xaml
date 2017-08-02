@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="NotesBook.EditDisciplinaPage">
+    <ContentPage.Content>
+        <StackLayout>
+            <Label Text="Nome" Style="{StaticResource LabelTitle}"/>
+            <Entry Text="{Binding Nome}" Placeholder="Nome da disciplina..." Style="{StaticResource EntryText}"/>
+                <Label Text="Período" Style="{StaticResource LabelTitle}"/>
+            <Label Text="{Binding Fase}" Style="{StaticResource LabelEntry}"/>
+            <Stepper Value="{Binding Fase}"  Maximum="{Binding QutdFases}" Increment="1"/>
+            <Label Text="Descrição" Style="{StaticResource LabelTitle}"/>
+            <Editor Text="{Binding Descricao}" Style="{StaticResource EditorText}"/>
+            <Button Text="Concluir" Style="{StaticResource ConfirmButton}" Command="{Binding ConcluirCommand}"/>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

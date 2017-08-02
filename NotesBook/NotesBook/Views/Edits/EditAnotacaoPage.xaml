@@ -1,0 +1,14 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="NotesBook.EditAnotacaoPage"
+             Title="Anotação">
+    <ContentPage.Content>
+        <StackLayout>
+            <Label Text="Titulo" Style="{StaticResource LabelTitle}"/>
+            <Entry Text="{Binding Titulo}" Placeholder="Titulo..." Style="{StaticResource EntryText}"/>
+            <Editor Text="{Binding Conteudo}" Style="{StaticResource EditorText}"/>
+            <Button Text="Concluir" Style="{StaticResource ConfirmButton}" Command="{Binding ConcluirCommand}"/>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
